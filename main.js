@@ -8,20 +8,13 @@
 4. gli aggiungo  la classe active.
 5. mi prendo gli elementi freccia e le salvo in una variabile. 
 6. utilizzo l'evento on click sulle frecce.
-7. aggiungo e tolgo la classe active.
+7. aggiungo e tolgo la classe active.*/
 
-<div class="items">
-<div class="item active">
-  
-</div>
-<div class="prev"></div>
-<div class="next"></div>
-</div>*/
 
 const items = document.querySelector(".items");
 const immagini = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg"]
 console.log(immagini)
-const conteggio = 0
+let conteggio = 0
 const next = document.querySelector(".next")
 
 
@@ -42,10 +35,38 @@ for (i = 0; i < immagini.length; i++) {
     if (i === conteggio) {
         item.classList.add("active")
     }
-   
+
 }
 const slider = document.querySelectorAll(".item");
-console.log(slider)
+    console.log(slider);
+next.addEventListener("click", function () {
+    
+
+    if (conteggio < slider.length - 1) {
+        console.log(conteggio)
+
+        slider[conteggio].classList.remove('active');
+        conteggio++;
+        slider[conteggio].classList.add('active');
+    }
+})
+const prev = document.querySelector(".prev")
+prev.addEventListener("click", function () {
+    const slider = document.querySelectorAll(".item");
+    console.log(slider);
+
+    if (conteggio > 0) {
+        console.log(conteggio)
+
+        slider[conteggio].classList.remove('active');
+        conteggio--;
+        slider[conteggio].classList.add('active');
+    }
+});
+
+
+
+
 
 
 

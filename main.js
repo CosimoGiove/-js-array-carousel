@@ -17,25 +17,42 @@
 <div class="prev"></div>
 <div class="next"></div>
 </div>*/
-const  items = document.querySelector(".items");
-const Immagini = [ "01.jpg", "02.jpg", "03.jpg","04.jpg","05.jpg"]
-console.log(Immagini)
-const item =document.createElement("div");
-item.classList.add("item");
-items.append(item);
-const img = document.createElement("img");
-item.append(img)
-console.log(items)
+
+const items = document.querySelector(".items");
+const immagini = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg"]
+console.log(immagini)
 const conteggio = 0
+const next = document.querySelector(".next")
 
 
-for(i = 0 ; i < Immagini.length; i++){
+for (i = 0; i < immagini.length; i++) {
     console.log(i)
-    if(conteggio === 0){
+    const next = document.querySelector(".next");
+    console.log(next)
+
+    const item = document.createElement("div");
+    item.classList.add("item");
+    items.append(item);
+
+    const img = document.createElement("img");
+    img.src = immagini[i];
+    item.append(img)
+    console.log(items)
+
+    if (i === conteggio) {
         item.classList.add("active")
     }
-    img.src = img/[i]
+   
 }
+const slider = document.querySelectorAll(".item");
+console.log(slider)
+
+
+
+
+
+
+
 
 
 

@@ -45,9 +45,9 @@ next.addEventListener("click", function () {
     if (conteggio < slider.length - 1) {
         console.log(conteggio)
 
-        slider[conteggio].classList.remove('active');
+        slider[conteggio].classList.remove("active");
         conteggio++;
-        slider[conteggio].classList.add('active');
+        slider[conteggio].classList.add("active");
     }
 })
 const prev = document.querySelector(".prev")
@@ -58,9 +58,9 @@ prev.addEventListener("click", function () {
     if (conteggio > 0) {
         console.log(conteggio)
 
-        slider[conteggio].classList.remove('active');
+        slider[conteggio].classList.remove("active");
         conteggio--;
-        slider[conteggio].classList.add('active');
+        slider[conteggio].classList.add("active");
     }
 });
 
